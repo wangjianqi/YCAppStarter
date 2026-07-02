@@ -1,11 +1,214 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "app.home.title" : {
+    "%@ · %@%% · %@" : {
       "localizations" : {
-        "en" : { "stringUnit" : { "state" : "translated", "value" : "Starter Kit" } },
-        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "启动模板" } }
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@%% · %3$@"
+          }
+        }
       }
+    },
+    "%@ · v%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · v%2$@"
+          }
+        }
+      }
+    },
+    "%@ passed · %@ warnings · %@ failed · %@ manual" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ passed · %2$@ warnings · %3$@ failed · %4$@ manual"
+          }
+        }
+      }
+    },
+    "%@%%" : {
+
+    },
+    "A clean utility paywall for simple tools." : {
+
+    },
+    "Actions" : {
+
+    },
+    "Active Activities" : {
+
+    },
+    "Active plugins: %@" : {
+
+    },
+    "ActivityKit" : {
+
+    },
+    "app.home.title" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starter Kit"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启动模板"
+          }
+        }
+      }
+    },
+    "AuthManaging is not registered." : {
+
+    },
+    "Banner is suppressed unless UMP allows requests, ads_enabled=true, admob_banner_enabled=true, Review Safe Mode is off and the user is not premium." : {
+
+    },
+    "Before submitting to App Review, set review_safe_mode_enabled=true in Firebase Remote Config or local defaults. After approval, turn it off remotely without shipping a new binary." : {
+
+    },
+    "Config/Environments/Development.xcconfig" : {
+
+    },
+    "Config/Environments/Production.xcconfig" : {
+
+    },
+    "Config/Environments/Secrets.xcconfig.sample" : {
+
+    },
+    "Config/Environments/Staging.xcconfig" : {
+
+    },
+    "Controls" : {
+
+    },
+    "Creates a pending privacy request row in Supabase. Your production backend or admin workflow should process the export." : {
+
+    },
+    "Current Snapshot" : {
+
+    },
+    "Dynamic Island" : {
+
+    },
+    "Dynamic Island rendering is provided by the Live Activity widget extension. This page keeps the operational checklist in the main app." : {
+
+    },
+    "Firebase Analytics events may not appear instantly. Use Firebase DebugView when validating event flow on device." : {
+
+    },
+    "Free vs Pro" : {
+
+    },
+    "Launch readiness" : {
+
+    },
+    "No active sample Live Activities." : {
+
+    },
+    "No handled links yet." : {
+
+    },
+    "No products loaded. Check RevenueCat offering, product IDs, App Store Connect status, StoreKit config, and sandbox account." : {
+
+    },
+    "Plugin Diagnostics" : {
+
+    },
+    "Plugin Surfaces" : {
+
+    },
+    "Production-ready plugin-first SwiftUI starter with commercial SDK adapters, App Store launch tooling, remote operations, AdMob/UMP monetization, AI proxy backend kit, Supabase auth/profile sync, push, deep links, account center flows, widgets, Live Activities, Dynamic Island and production hardening gates." : {
+
+    },
+    "Progress: %@%%" : {
+
+    },
+    "PushManaging is not registered." : {
+
+    },
+    "python3 Scripts/appstore_preflight.py" : {
+
+    },
+    "python3 Scripts/check_app_ads_txt.py --domain example.com --publisher pub-0000000000000000" : {
+
+    },
+    "python3 Scripts/check_localization.py" : {
+
+    },
+    "python3 Scripts/configure_admob.py --app-id ca-app-pub-xxx~yyy --banner ca-app-pub-xxx/aaa --interstitial ca-app-pub-xxx/bbb --rewarded ca-app-pub-xxx/ccc" : {
+
+    },
+    "python3 Scripts/validate_ci.py" : {
+
+    },
+    "python3 Scripts/validate_storekit.py" : {
+
+    },
+    "python3 Scripts/ycstarter.py validate" : {
+
+    },
+    "Readiness Checklist" : {
+
+    },
+    "Remote Policy" : {
+
+    },
+    "Request Account Deletion" : {
+
+    },
+    "Review Safe Mode and Kill Switch suppress AI entry points by default. Use Remote Config to enable AI after review-safe validation." : {
+
+    },
+    "Sign in before syncing profile data." : {
+
+    },
+    "Sign Out" : {
+
+    },
+    "Start, update and end a sample Live Activity. The widget extension provides the Lock Screen and Dynamic Island UI." : {
+
+    },
+    "StoreKit test products are for local validation only. Production purchases must be verified with App Store Connect products and RevenueCat offerings." : {
+
+    },
+    "The script statically scans Localizable.xcstrings and reports missing or empty localizations." : {
+
+    },
+    "This starter submits a deletion request instead of deleting the auth user directly from the client. Use a trusted backend/admin workflow to complete deletion." : {
+
+    },
+    "Unlock the full starter experience" : {
+
+    },
+    "Upgrade to Pro" : {
+
+    },
+    "Use Metadata/ as the single source of App Store Connect copy. Keep review notes, privacy answers and screenshot copy updated for every build." : {
+
+    },
+    "Use this template for camera, media, photo cleaner, scanner and creative apps." : {
+
+    },
+    "WidgetKit" : {
+
+    },
+    "Writes a compact snapshot to the shared App Group. The widget extension reads this snapshot from UserDefaults and refreshes its timeline." : {
+
+    },
+    "xcodebuild test -scheme YCAppStarter -destination 'platform=iOS Simulator,name=iPhone 16'" : {
+
+    },
+    "YCAppStarter V3.1" : {
+
     }
   },
   "version" : "1.0"

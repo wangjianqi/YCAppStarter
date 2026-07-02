@@ -32,7 +32,7 @@ final class GoogleAdMobManager: NSObject, ObservableObject, AdManaging {
             return
         }
 #if canImport(GoogleMobileAds)
-        MobileAds.shared.start()
+        await MobileAds.shared.start()
         isSDKStarted = true
         lastEventMessage = "Google Mobile Ads SDK started."
 #else

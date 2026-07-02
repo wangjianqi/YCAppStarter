@@ -8,7 +8,7 @@ final class AppContainer: ObservableObject {
     let secrets: AppSecrets
     let services: ServiceRegistry
     let logger: AppLogging
-    let router = AppRouter()
+    @Published var router = AppRouter()
     let pluginRuntime: PluginRuntime
 
     init(

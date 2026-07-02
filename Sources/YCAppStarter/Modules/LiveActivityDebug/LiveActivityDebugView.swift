@@ -54,20 +54,20 @@ struct LiveActivityDebugView: View {
             VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
                 Text("Controls")
                     .font(.headline)
-                PrimaryButton(title: "Start Sample Activity", systemImage: "play.circle") {
+                PrimaryButton("Start Sample Activity", systemImage: "play.circle") {
                     Task { await start(pushTypeToken: false) }
                 }
-                SecondaryButton(title: "Start With Push Token", systemImage: "bell.badge") {
+                SecondaryButton("Start With Push Token", systemImage: "bell.badge") {
                     Task { await start(pushTypeToken: true) }
                 }
                 VStack(alignment: .leading) {
                     Text("Progress: \(Int(progress * 100))%")
                     Slider(value: $progress, in: 0...1)
                 }
-                SecondaryButton(title: "Update Activities", systemImage: "arrow.triangle.2.circlepath") {
+                SecondaryButton("Update Activities", systemImage: "arrow.triangle.2.circlepath") {
                     Task { await update() }
                 }
-                SecondaryButton(title: "End All Activities", systemImage: "xmark.circle") {
+                SecondaryButton("End All Activities", systemImage: "xmark.circle") {
                     Task { await endAll() }
                 }
             }

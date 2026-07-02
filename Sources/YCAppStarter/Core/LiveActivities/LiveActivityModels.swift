@@ -5,7 +5,7 @@ struct LiveActivityPolicy: Hashable {
     let dynamicIslandEnabled: Bool
     let pushUpdatesEnabled: Bool
 
-    static func make(from remoteConfig: RemoteConfigServicing?) -> LiveActivityPolicy {
+    @MainActor static func make(from remoteConfig: RemoteConfigServicing?) -> LiveActivityPolicy {
         guard let remoteConfig else {
             return LiveActivityPolicy(liveActivityEnabled: false, dynamicIslandEnabled: false, pushUpdatesEnabled: false)
         }

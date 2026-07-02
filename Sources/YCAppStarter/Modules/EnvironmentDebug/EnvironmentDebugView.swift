@@ -5,8 +5,8 @@ struct EnvironmentDebugView: View {
         List {
             Section("Current") {
                 LabeledContent("Environment", value: BuildEnvironmentReader.current.displayName)
-                LabeledContent("Verbose Logging", value: BuildEnvironmentReader.current.allowsVerboseLogging ? "Enabled" : "Disabled")
-                LabeledContent("StoreKit Test", value: BuildEnvironmentReader.current.shouldUseStoreKitTest ? "Enabled" : "Disabled")
+                LabeledContent("Verbose Logging", value: BuildEnvironmentReader.allowsVerboseLogging ? "Enabled" : "Disabled")
+                LabeledContent("StoreKit Test", value: BuildEnvironmentReader.shouldUseStoreKitTest ? "Enabled" : "Disabled")
             }
 
             Section("Available") {

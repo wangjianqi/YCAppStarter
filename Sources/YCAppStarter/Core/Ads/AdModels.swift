@@ -51,6 +51,7 @@ struct AdPolicy: Hashable {
         }
     }
 
+    @MainActor
     static func make(container: AppContainer) -> AdPolicy {
         let remoteConfig = container.service(RemoteConfigServicing.self)
         let purchase = container.service(PurchaseManaging.self)

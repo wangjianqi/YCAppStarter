@@ -52,14 +52,9 @@ final class FirebaseRemoteConfigService: RemoteConfigServicing {
     }
 
     private func fetchAndActivate() async throws {
-        try await withCheckedThrowingContinuation { continuation in
-            remoteConfig.fetchAndActivate { _, error in
-                if let error {
-                    continuation.resume(throwing: error)
-                } else {
-                    continuation.resume()
-                }
-            }
+        let status = try await remoteConfig.fetchAndActivate()
+        if status == .successFetchedFromRemote || status == .successUsingPreFetchedData {
+            return
         }
     }
 }

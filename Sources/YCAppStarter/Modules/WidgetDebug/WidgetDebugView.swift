@@ -61,14 +61,14 @@ struct WidgetDebugView: View {
             VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
                 Text("Actions")
                     .font(.headline)
-                PrimaryButton(title: "Save Sample Snapshot", systemImage: "square.and.arrow.down") {
+                PrimaryButton("Save Sample Snapshot", systemImage: "square.and.arrow.down") {
                     guard let manager = container.service(WidgetManaging.self) else { return }
                     let sample = manager.makeSampleSnapshot()
                     manager.save(snapshot: sample)
                     manager.reloadAllTimelines()
                     snapshot = sample
                 }
-                SecondaryButton(title: "Reload Widget Timelines", systemImage: "arrow.clockwise") {
+                SecondaryButton("Reload Widget Timelines", systemImage: "arrow.clockwise") {
                     container.service(WidgetManaging.self)?.reloadAllTimelines()
                     refresh()
                 }

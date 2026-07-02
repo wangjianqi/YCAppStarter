@@ -47,6 +47,7 @@ struct PushLaunchPolicy: Equatable, Hashable {
     let marketingPushEnabled: Bool
     let transactionalPushEnabled: Bool
 
+    @MainActor
     static func make(from remoteConfig: RemoteConfigServicing) -> PushLaunchPolicy {
         PushLaunchPolicy(
             isPushEnabled: !remoteConfig.isReviewSafeModeEnabled && !remoteConfig.isGlobalKillSwitchEnabled && remoteConfig.bool(RemoteConfigKeys.pushEnabled, default: false),

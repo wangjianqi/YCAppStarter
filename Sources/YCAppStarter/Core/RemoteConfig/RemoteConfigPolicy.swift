@@ -13,6 +13,7 @@ struct LaunchPolicy: Hashable {
     let ai: AILaunchPolicy
     let widget: WidgetLaunchPolicy
 
+    @MainActor
     static func make(from remoteConfig: RemoteConfigServicing) -> LaunchPolicy {
         LaunchPolicy(
             reviewSafeModeEnabled: remoteConfig.isReviewSafeModeEnabled,
@@ -35,6 +36,7 @@ struct PromotionConfig: Hashable {
     let title: String
     let message: String
 
+    @MainActor
     static func make(from remoteConfig: RemoteConfigServicing) -> PromotionConfig {
         let enabled = remoteConfig.bool(RemoteConfigKeys.promotionBannerEnabled, default: false)
         return PromotionConfig(
@@ -53,6 +55,7 @@ struct AILaunchPolicy: Hashable {
     let defaultModel: String
     let dailyQuota: Int
 
+    @MainActor
     static func make(from remoteConfig: RemoteConfigServicing) -> AILaunchPolicy {
         let baseEnabled = remoteConfig.bool(RemoteConfigKeys.aiEnabled, default: false)
         let safeToRun = !remoteConfig.isReviewSafeModeEnabled && !remoteConfig.isGlobalKillSwitchEnabled
@@ -74,6 +77,7 @@ struct WidgetLaunchPolicy: Hashable {
     let dynamicIslandEnabled: Bool
     let liveActivityPushUpdatesEnabled: Bool
 
+    @MainActor
     static func make(from remoteConfig: RemoteConfigServicing) -> WidgetLaunchPolicy {
         let safeToRun = !remoteConfig.isReviewSafeModeEnabled && !remoteConfig.isGlobalKillSwitchEnabled
         return WidgetLaunchPolicy(

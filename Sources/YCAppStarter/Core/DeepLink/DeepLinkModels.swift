@@ -33,6 +33,7 @@ struct DeepLinkLaunchPolicy: Equatable, Hashable {
     let deepLinksEnabled: Bool
     let magicLinksEnabled: Bool
 
+    @MainActor
     static func make(from remoteConfig: RemoteConfigServicing) -> DeepLinkLaunchPolicy {
         DeepLinkLaunchPolicy(
             deepLinksEnabled: !remoteConfig.isGlobalKillSwitchEnabled && remoteConfig.bool(RemoteConfigKeys.deepLinksEnabled, default: true),

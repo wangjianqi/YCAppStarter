@@ -60,6 +60,7 @@ struct AuthLaunchPolicy: Equatable, Hashable {
     let membershipSyncEnabled: Bool
     let aiUsageSyncEnabled: Bool
 
+    @MainActor
     static func make(from remoteConfig: RemoteConfigServicing) -> AuthLaunchPolicy {
         AuthLaunchPolicy(
             isAuthEnabled: !remoteConfig.isReviewSafeModeEnabled && !remoteConfig.isGlobalKillSwitchEnabled && remoteConfig.bool(RemoteConfigKeys.authEnabled, default: true),

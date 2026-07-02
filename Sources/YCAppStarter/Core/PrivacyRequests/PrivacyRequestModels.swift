@@ -31,6 +31,7 @@ struct AccountCenterPolicy: Equatable, Hashable {
     let accountDeletionEnabled: Bool
     let dataExportEnabled: Bool
 
+    @MainActor
     static func make(from remoteConfig: RemoteConfigServicing) -> AccountCenterPolicy {
         AccountCenterPolicy(
             accountCenterEnabled: !remoteConfig.isGlobalKillSwitchEnabled && remoteConfig.bool(RemoteConfigKeys.accountCenterEnabled, default: true),

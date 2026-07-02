@@ -1,6 +1,7 @@
 import Foundation
 
 struct DefaultProductionReadinessService: ProductionReadinessServicing {
+    @MainActor
     func makeReport(container: AppContainer) -> ProductionReadinessReport {
         let environment = BuildEnvironmentReader.current
         var checks: [ProductionReadinessCheck] = []

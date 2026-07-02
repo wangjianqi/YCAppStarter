@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ycappstarter-ai-proxy",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-07-01",
+  "vars": {
+    "AI_PROVIDER": "openai",
+    "AI_DEFAULT_MODEL": "gpt-5.5-mini",
+    "AI_DAILY_QUOTA": "25",
+    "AI_REQUIRE_CLIENT_TOKEN": "false"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "identifier": "YCAppStarter.storekit",
+  "nonRenewingSubscriptions": [],
+  "products": [
+    {
+      "displayPrice": "1.99",
+      "familyShareable": false,
+      "internalID": "premium_lifetime",
+      "localizations": [
+        {
+          "description": "Unlock all starter Pro features",
+          "displayName": "Lifetime Pro",
+          "locale": "en_US"
+        }
+      ],
+      "productID": "premium_lifetime",
+      "referenceName": "Lifetime Pro",
+      "type": "NonConsumable"
+    }
+  ],
+  "settings": {
+    "_failTransactionsEnabled": false,
+    "_locale": "en_US",
+    "_storefront": "USA",
+    "_timeRate": 1
+  },
+  "subscriptionGroups": []
+}

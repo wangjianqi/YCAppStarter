@@ -1,0 +1,12 @@
+# Copy to .dev.vars for local development. Do not commit real values.
+OPENAI_API_KEY=sk-proj_xxx
+AI_PROXY_CLIENT_TOKEN=local-dev-token
+AI_REQUIRE_CLIENT_TOKEN=false
+AI_PROVIDER=openai
+AI_DEFAULT_MODEL=gpt-5.5-mini
+AI_DAILY_QUOTA=25
+
+# V2.8 Supabase Auth middleware
+SUPABASE_URL=https://your-project-ref.supabase.co
+SUPABASE_REQUIRE_AUTH=false
+SUPABASE_SERVICE_ROLE_KEY=sb_secret_xxx

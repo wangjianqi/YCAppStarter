@@ -1,0 +1,18 @@
+name: Validate Starter
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  static-validation:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Validate starter
+        run: python3 Scripts/ycstarter.py validate
+      - name: Generate Xcode project
+        run: xcodegen generate

@@ -1,0 +1,8 @@
+.DS_Store
+*.xcworkspace
+*.xcodeproj
+DerivedData
+.build
+.swiftpm
+xcuserdata
+Sources/YCAppStarter/Config/AppSecrets.swift

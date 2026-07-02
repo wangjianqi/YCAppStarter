@@ -19,6 +19,7 @@ struct StarterVersion: RawRepresentable, Comparable, Hashable, Codable, CustomSt
     static let v28 = StarterVersion(rawValue: "2.8.0")
     static let v29 = StarterVersion(rawValue: "2.9.0")
     static let v30 = StarterVersion(rawValue: "3.0.0")
+    static let v31 = StarterVersion(rawValue: "3.1.0")
 
     var description: String { rawValue }
 

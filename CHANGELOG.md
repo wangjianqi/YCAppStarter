@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.0.0
+## 3.1.0
 
 - Added Production Hardening Kit.
 - Added multi-environment xcconfig files.

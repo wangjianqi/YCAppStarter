@@ -24,7 +24,7 @@ struct StarterStatusProvider: TimelineProvider {
 
     private func loadSnapshot() -> StarterWidgetSnapshot {
         guard
-            let defaults = UserDefaults(suiteName: "group.com.yuechuanlabs.ycappstarter"),
+            let defaults = UserDefaults(suiteName: StarterSharedConfig.appGroupIdentifier),
             let data = defaults.data(forKey: StarterWidgetSharedKeys.snapshotKey)
         else { return .placeholder }
 
@@ -51,7 +51,7 @@ struct StarterStatusWidgetEntryView: View {
                 .foregroundStyle(.tertiary)
         }
         .containerBackground(.fill.tertiary, for: .widget)
-        .widgetURL(URL(string: entry.snapshot.deepLinkURLString))
+        .widgetURL(URL(string: entry.snapshot.deepLinkURLString.replacingOccurrences(of: "ycappstarter", with: StarterSharedConfig.urlScheme, options: [.anchored])))
     }
 }
 
@@ -62,7 +62,7 @@ struct StarterStatusWidget: Widget {
         StaticConfiguration(kind: kind, provider: StarterStatusProvider()) { entry in
             StarterStatusWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("YCAppStarter Status")
+        .configurationDisplayName("Starter Status")
         .description("Shows the latest App Group snapshot from the main app.")
         .supportedFamilies([.systemSmall, .systemMedium, .accessoryCircular, .accessoryRectangular])
     }

@@ -32,7 +32,7 @@ struct HomeView: View {
     private var header: some View {
         AppCard {
             VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
-                Text("YCAppStarter V3.0")
+                Text("YCAppStarter V3.1")
                     .font(.largeTitle.bold())
                 Text("Production-ready plugin-first SwiftUI starter with commercial SDK adapters, App Store launch tooling, remote operations, AdMob/UMP monetization, AI proxy backend kit, Supabase auth/profile sync, push, deep links, account center flows, widgets, Live Activities, Dynamic Island and production hardening gates.")
                     .font(.body)

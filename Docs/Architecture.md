@@ -1,6 +1,6 @@
 # Architecture
 
-YCAppStarter V2.4 uses a plugin-first architecture with three layers:
+YCAppStarter V3.1 uses a plugin-first architecture with three layers:
 
 ```text
 App Shell
@@ -18,7 +18,7 @@ Feature Plugins
 - Feature surfaces are contributed through plugin home/settings/debug items.
 - Business screens should resolve services from `AppContainer` instead of directly importing SDKs.
 
-## V2.4 Remote Operations
+## Remote Operations
 
 Remote operation controls are exposed by `RemoteConfigServicing` and interpreted by `LaunchPolicy`.
 

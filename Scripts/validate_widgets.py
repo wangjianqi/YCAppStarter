@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import plistlib, re, sys
+import argparse, plistlib, re, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+parser = argparse.ArgumentParser(description="Validate Widget/Live Activity wiring.")
+parser.add_argument("--strict", action="store_true")
+args = parser.parse_args()
+
 errors: list[str] = []
 warnings: list[str] = []
 
@@ -62,6 +66,8 @@ widget_source = text("Sources/YCAppStarterWidgets/StarterStatusWidget.swift")
 match = re.search(r'UserDefaults\(suiteName: "([^"]+)"\)', widget_source)
 if match and not match.group(1).startswith("group."):
     errors.append("Widget UserDefaults suiteName must be an App Group identifier")
+if "StarterSharedConfig.appGroupIdentifier" not in widget_source:
+    warnings.append("StarterStatusWidget.swift should read App Group from StarterSharedConfig instead of a hard-coded suite name")
 
 print("validate_widgets")
 print("=" * 16)
@@ -70,4 +76,4 @@ for item in errors:
 for item in warnings:
     print(f"⚠️ {item}")
 print(f"Summary: {len(errors)} error(s), {len(warnings)} warning(s)")
-sys.exit(1 if errors else 0)
+sys.exit(1 if errors or (args.strict and warnings) else 0)

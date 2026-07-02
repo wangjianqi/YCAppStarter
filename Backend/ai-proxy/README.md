@@ -1,6 +1,6 @@
 # YCAppStarter AI Proxy Backend
 
-Cloudflare Workers + Hono template for YCAppStarter V2.8.
+Cloudflare Workers + Hono template for YCAppStarter.
 
 ## Why this exists
 

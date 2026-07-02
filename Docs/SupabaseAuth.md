@@ -1,6 +1,6 @@
 # Supabase Auth Plugin
 
-YCAppStarter V2.7 adds `SupabaseAuthPlugin` as a removable plugin.
+YCAppStarter includes `SupabaseAuthPlugin` as a removable plugin.
 
 ## What it provides
 

@@ -7,10 +7,10 @@
 		<string>Default</string>
 	</array>
 	<key>aps-environment</key>
-	<string>development</string>
+	<string>$(YC_STARTER_APNS_ENVIRONMENT)</string>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.yuechuanlabs.ycappstarter</string>
+		<string>$(YC_STARTER_APP_GROUP_IDENTIFIER)</string>
 	</array>
 </dict>
 </plist>

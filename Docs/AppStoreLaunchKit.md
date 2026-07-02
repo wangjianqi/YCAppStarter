@@ -1,6 +1,6 @@
 # App Store Launch Kit
 
-YCAppStarter V2.3 adds a release-readiness layer on top of the plugin runtime.
+YCAppStarter includes a release-readiness layer on top of the plugin runtime.
 
 ## Included
 

@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-parser = argparse.ArgumentParser(description='Create a removable YCAppStarter V2.4 plugin skeleton.')
+parser = argparse.ArgumentParser(description='Create a removable YCAppStarter plugin skeleton.')
 parser.add_argument('name', help='Plugin name, for example AIChat or ExportTools')
 parser.add_argument('--feature', help='AppFeature case, for example aiAssistant')
 parser.add_argument('--category', default='sample', help='PluginCategory case')

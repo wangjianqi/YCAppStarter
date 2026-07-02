@@ -15,7 +15,7 @@ def replace_literal(text: str, field: str, value: str) -> str:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Configure APNs/Firebase Messaging basics for YCAppStarter V2.8.")
+    parser = argparse.ArgumentParser(description="Configure APNs/Firebase Messaging basics for YCAppStarter.")
     parser.add_argument("--environment", choices=["development", "production"], default="development")
     parser.add_argument("--bundle-id", default="", help="Optional push topic bundle id. Defaults to PRODUCT_BUNDLE_IDENTIFIER.")
     args = parser.parse_args()

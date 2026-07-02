@@ -1,6 +1,6 @@
-# YCAppStarter V2.4 Remote Config
+# YCAppStarter Remote Config
 
-V2.4 adds a remote operations layer for App Review safety, emergency feature shutdowns, paywall variant control, ad display control and promotion campaigns.
+Remote Config adds a remote operations layer for App Review safety, emergency feature shutdowns, paywall variant control, ad display control and promotion campaigns.
 
 ## Files
 
@@ -53,7 +53,7 @@ Use `--strict` in CI if warnings should fail the build.
 
 ## Firebase Remote Config
 
-V2.4 includes `FirebaseRemoteConfigService` and adds the `FirebaseRemoteConfig` SPM product in `project.yml`.
+The starter includes `FirebaseRemoteConfigService` and adds the `FirebaseRemoteConfig` SPM product in `project.yml`.
 
 To enable remote fetches:
 

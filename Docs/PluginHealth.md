@@ -1,6 +1,6 @@
 # Plugin Health
 
-YCAppStarter V2.1 adds a first-class plugin health model. The goal is to make plugins safe to add, disable, remove and diagnose.
+YCAppStarter includes a first-class plugin health model. The goal is to make plugins safe to add, disable, remove and diagnose.
 
 ## Runtime model
 

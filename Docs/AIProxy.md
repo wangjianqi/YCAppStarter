@@ -1,6 +1,6 @@
 # AI Proxy Plugin
 
-YCAppStarter V2.6 adds an AI proxy plugin instead of calling model providers directly from iOS.
+YCAppStarter includes an AI proxy plugin instead of calling model providers directly from iOS.
 
 ## App-side services
 

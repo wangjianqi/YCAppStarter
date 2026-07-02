@@ -4,11 +4,11 @@ import subprocess, sys
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 commands = [
-    ["python3", "Scripts/validate_remote_config.py"],
-    ["python3", "Scripts/validate_storekit.py"],
-    ["python3", "Scripts/validate_ci.py"],
-    ["python3", "Scripts/appstore_preflight.py"],
-    ["python3", "Scripts/ycstarter_doctor.py"],
+    ["python3", "Scripts/validate_remote_config.py", "--strict"],
+    ["python3", "Scripts/validate_storekit.py", "--strict"],
+    ["python3", "Scripts/validate_ci.py", "--strict"],
+    ["python3", "Scripts/appstore_preflight.py", "--strict"],
+    ["python3", "Scripts/ycstarter_doctor.py", "--strict"],
 ]
 failed = 0
 for cmd in commands:

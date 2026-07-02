@@ -1,6 +1,6 @@
 # AdMobPlugin
 
-YCAppStarter V2.5 adds a real Google Mobile Ads adapter while keeping the starter safe by default.
+YCAppStarter includes a real Google Mobile Ads adapter while keeping the starter safe by default.
 
 ## What is included
 

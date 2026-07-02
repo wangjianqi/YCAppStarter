@@ -38,6 +38,26 @@ REQUIRED_KEYS: dict[str, type | tuple[type, ...]] = {
     "profile_sync_enabled": bool,
     "membership_sync_enabled": bool,
     "ai_usage_sync_enabled": bool,
+    "push_enabled": bool,
+    "push_marketing_enabled": bool,
+    "push_transactional_enabled": bool,
+    "deep_links_enabled": bool,
+    "magic_links_enabled": bool,
+    "account_center_enabled": bool,
+    "account_deletion_enabled": bool,
+    "data_export_enabled": bool,
+    "widget_enabled": bool,
+    "widget_refresh_minutes": int,
+    "live_activity_enabled": bool,
+    "dynamic_island_enabled": bool,
+    "live_activity_push_updates_enabled": bool,
+    "production_readiness_enabled": bool,
+    "ci_validation_required": bool,
+    "storekit_test_enabled": bool,
+    "event_catalog_enforced": bool,
+    "release_packaging_enabled": bool,
+    "minimum_test_coverage_percent": int,
+    "preflight_block_on_warnings": bool,
 }
 
 VALID_PAYWALL_VARIANTS = {"minimal", "visualHero", "comparison"}
@@ -94,6 +114,12 @@ def main() -> int:
 
         if data.get("feature_kill_switch_enabled") is True:
             warnings.append("feature_kill_switch_enabled=true in bundled defaults. This should normally be false for production builds.")
+
+        if isinstance(data.get("minimum_test_coverage_percent"), int) and data["minimum_test_coverage_percent"] < 50:
+            warnings.append("minimum_test_coverage_percent is below 50. Starter release gates should remain meaningful.")
+
+        if data.get("preflight_block_on_warnings") is True and data.get("production_readiness_enabled") is False:
+            warnings.append("preflight_block_on_warnings=true but production_readiness_enabled=false. Release policy is contradictory.")
 
     for message in errors:
         print(f"[ERR] {message}")

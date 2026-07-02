@@ -1,4 +1,4 @@
-# YCAppStarter V3.0
+# YCAppStarter V3.1
 
 Production-ready, plugin-first SwiftUI starter kit for independent iOS apps.
 
@@ -30,4 +30,17 @@ python3 Scripts/validate_storekit.py
 
 ## Version
 
-Current starter version: `3.0.0`.
+Current starter version: `3.1.0`.
+
+
+## V3.1 Production Stabilization
+
+V3.1 focuses on production readiness rather than new feature surfaces.
+
+```bash
+python3 Scripts/ycstarter.py init   --app-name "My App"   --bundle-id com.company.myapp   --app-group group.com.company.myapp   --url-scheme myapp
+
+python3 Scripts/ycstarter.py validate --strict
+```
+
+The initializer updates the app target, widget extension, App Group, URL scheme, build settings, entitlements and core template defaults in one pass.

@@ -49,11 +49,11 @@ final class AppGroupWidgetStore: WidgetManaging {
 
     func makeSampleSnapshot() -> StarterWidgetSnapshot {
         StarterWidgetSnapshot(
-            title: "YCAppStarter V2.9",
+            title: "YCAppStarter V3.1",
             message: "Widget snapshot updated from the main app.",
             progress: Double.random(in: 0.15...0.95),
             updatedAt: Date(),
-            deepLinkURLString: "ycappstarter://widget-debug"
+            deepLinkURLString: "\(StarterSharedConfig.urlScheme)://widget-debug"
         )
     }
 

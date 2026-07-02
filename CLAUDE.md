@@ -1,4 +1,4 @@
-# YCAppStarter V3.0 Agent Notes
+# YCAppStarter V3.1 Agent Notes
 
 This is a plugin-first SwiftUI starter. Preserve the plugin boundary.
 

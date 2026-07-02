@@ -56,6 +56,14 @@ enum RemoteConfigKeys {
     static let dynamicIslandEnabled: RemoteConfigKey = "dynamic_island_enabled"
     static let liveActivityPushUpdatesEnabled: RemoteConfigKey = "live_activity_push_updates_enabled"
 
+    static let productionReadinessEnabled: RemoteConfigKey = "production_readiness_enabled"
+    static let ciValidationRequired: RemoteConfigKey = "ci_validation_required"
+    static let storeKitTestEnabled: RemoteConfigKey = "storekit_test_enabled"
+    static let eventCatalogEnforced: RemoteConfigKey = "event_catalog_enforced"
+    static let releasePackagingEnabled: RemoteConfigKey = "release_packaging_enabled"
+    static let minimumTestCoveragePercent: RemoteConfigKey = "minimum_test_coverage_percent"
+    static let preflightBlockOnWarnings: RemoteConfigKey = "preflight_block_on_warnings"
+
     static let launchCriticalKeys: [RemoteConfigKey] = [
         reviewSafeModeEnabled,
         featureKillSwitchEnabled,
@@ -90,7 +98,14 @@ enum RemoteConfigKeys {
         widgetRefreshMinutes,
         liveActivityEnabled,
         dynamicIslandEnabled,
-        liveActivityPushUpdatesEnabled
+        liveActivityPushUpdatesEnabled,
+        productionReadinessEnabled,
+        ciValidationRequired,
+        storeKitTestEnabled,
+        eventCatalogEnforced,
+        releasePackagingEnabled,
+        minimumTestCoveragePercent,
+        preflightBlockOnWarnings
     ]
 }
 
@@ -218,6 +233,20 @@ enum RemoteConfigKeyMetadata {
             return "Controls whether Dynamic Island-specific surfaces are presented."
         case RemoteConfigKeys.liveActivityPushUpdatesEnabled:
             return "Controls whether Live Activity push-token related surfaces are visible."
+        case RemoteConfigKeys.productionReadinessEnabled:
+            return "Controls whether production readiness surfaces are visible."
+        case RemoteConfigKeys.ciValidationRequired:
+            return "Controls whether CI validation is treated as a launch-critical requirement."
+        case RemoteConfigKeys.storeKitTestEnabled:
+            return "Controls whether StoreKit test tooling is visible in debug surfaces."
+        case RemoteConfigKeys.eventCatalogEnforced:
+            return "Controls whether analytics event catalog checks are enforced."
+        case RemoteConfigKeys.releasePackagingEnabled:
+            return "Controls whether release packaging surfaces are visible."
+        case RemoteConfigKeys.minimumTestCoveragePercent:
+            return "Minimum expected test coverage percentage for release readiness reporting."
+        case RemoteConfigKeys.preflightBlockOnWarnings:
+            return "When true, preflight warnings should block production release validation."
         default:
             return "Custom remote configuration key."
         }

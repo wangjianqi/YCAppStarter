@@ -65,7 +65,7 @@ targets:
       - package: GoogleMobileAds
         product: GoogleMobileAds
       - package: GoogleUserMessagingPlatform
-        product: UserMessagingPlatform
+        product: GoogleUserMessagingPlatform
       - package: Supabase
         product: Supabase
       - target: YCAppStarterWidgetsExtension

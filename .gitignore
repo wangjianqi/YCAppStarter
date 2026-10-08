@@ -6,3 +6,9 @@ DerivedData
 .swiftpm
 xcuserdata
 Sources/YCAppStarter/Config/AppSecrets.swift
+
+# Local secrets — never commit real values.
+# Only the *.example / *.sample counterparts belong in the repo.
+.dev.vars
+Config/Environments/Secrets.xcconfig
+node_modules/
